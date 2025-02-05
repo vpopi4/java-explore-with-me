@@ -49,7 +49,7 @@ public class StatsController {
             Boolean isUnique
     ) throws ClientException {
         log.info("--> GET /stats: start={}, end={}, uris={}, unique={}", start, end, uris, isUnique);
-        
+
         return statsService.getStats(start, end, uris, isUnique);
     }
 }

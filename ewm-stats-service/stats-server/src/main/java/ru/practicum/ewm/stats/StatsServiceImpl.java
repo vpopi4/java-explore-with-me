@@ -22,6 +22,7 @@ public class StatsServiceImpl implements StatsService {
     @Override
     public Stats hit(HitDto dto) throws ClientException {
         Stats stats = Stats.builder()
+                .id(null)
                 .app(dto.getApp())
                 .uri(dto.getUri())
                 .ip(dto.getIp())
@@ -37,6 +38,13 @@ public class StatsServiceImpl implements StatsService {
                                    LocalDateTime end,
                                    List<String> uris,
                                    Boolean isUnique) throws ClientException {
+        if (end.isBefore(start)) {
+            throw ClientException.getBadRequestException(
+                    "incorrect date range",
+                    "incorrect date range: end date is before start date"
+            );
+        }
+
         if (isUnique) {
             return statsRepository.findUniqueStats(start, end, uris);
         } else {
