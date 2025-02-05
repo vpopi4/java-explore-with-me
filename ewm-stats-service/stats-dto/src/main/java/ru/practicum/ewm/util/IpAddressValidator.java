@@ -1,4 +1,4 @@
-package ru.practicum.ewm.stats.util;
+package ru.practicum.ewm.util;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
