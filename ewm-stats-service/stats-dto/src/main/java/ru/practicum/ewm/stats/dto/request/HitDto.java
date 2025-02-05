@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.practicum.ewm.stats.util.ValidIpAddress;
+import ru.practicum.ewm.util.ValidIpAddress;
 
 import java.time.LocalDateTime;
 
