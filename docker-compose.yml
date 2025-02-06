@@ -7,9 +7,9 @@ services:
     build:
       context: ./ewm-stats-service/server
     environment:
-      - DATASOURCE_URL=jdbc:postgresql://stats-db:5432/ewm-stats-db
-      - DATASOURCE_USERNAME=ewm-admin
-      - DATASOURCE_PASSWORD=hehehe
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://stats-db:5432/ewm-stats-db
+      - SPRING_DATASOURCE_USERNAME=ewm-admin
+      - SPRING_DATASOURCE_PASSWORD=hehehe
     depends_on:
       - stats-db
 
@@ -36,9 +36,9 @@ services:
     build:
       context: ./ewm-main-service
     environment:
-      - DATASOURCE_URL=jdbc:postgresql://ewm-db:5432/ewm-db
-      - DATASOURCE_USERNAME=ewm-admin
-      - DATASOURCE_PASSWORD=hehehe
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://ewm-db:5432/ewm-db
+      - SPRING_DATASOURCE_USERNAME=ewm-admin
+      - SPRING_DATASOURCE_PASSWORD=hehehe
     depends_on:
       - ewm-db
       - stats-server
