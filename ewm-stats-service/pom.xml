@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>ewm-stats-service</artifactId>
-	<packaging>pom</packaging>
+    <packaging>pom</packaging>
 
     <modules>
         <module>client</module>
